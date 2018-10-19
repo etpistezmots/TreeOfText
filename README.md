@@ -16,12 +16,13 @@ de Jaccard classique et avec la méthode de Ward pour les regroupements
 
 Ici, possibilité de choisir pour le calcul de la distance :
    - Labbe, Jaccard, JaccardBrunet
+  
 et pour les méthodes de regroupements :
    - Ward, neighborjoining (très proche de la méthode utilisée par HyperBase)
 
 Le code permet de rajouter facilement d'autres méthodes si nécessaire
 
-La sortie obtenue est de type Newick
+La sortie obtenue est de type Newick.
 L'idée est de copier-coller directement cette sortie dans ITOL : https://itol.embl.de/
 pour mettre en page les résultats (Onglet Upload --> copier la sortie dans la fenêtre "Tree text
 --> Upload)
