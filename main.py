@@ -48,7 +48,7 @@ StockResult = MatriceCarre(column,"float")
 pd.options.display.float_format = '${:,.4f}'.format
 
 # itère sur toutes les combinaisons de 2 noms de colonne
-# A chaque fois, on va calculer la distance p
+# A chaque fois, on va calculer la distance entre ces deux colonnes
 
 for x in itertools.combinations(column, 2):
 
