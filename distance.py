@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def Labbe(MatEntree,col1,col2):
     '''

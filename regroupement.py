@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from skbio import DistanceMatrix
 from skbio.tree import nj
 from scipy.cluster import hierarchy
@@ -38,6 +40,24 @@ def Ward(Matrice):
 
     # petite manip ci dessous pour obtenir format newick comme précedemment
     # permet d'utiliser ITOL pour la mise en page
+
+    tree = hierarchy.to_tree(Z, False)
+
+    newick_str = getNewick(tree, "", tree.dist, ids)
+    return newick_str
+
+def Ugpma(Matrice):
+
+    # idem Ward
+    ids = list(Matrice)
+
+    Matrice = ssd.squareform(Matrice.as_matrix())
+
+    #https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html
+    # average
+    # "average(y) 	Perform average/UPGMA linkage on a condensed distance matrix."
+    # # scipy.cluster.hierarchy.average is an implementation of UPGMA
+    Z = linkage(Matrice,method="average")
 
     tree = hierarchy.to_tree(Z, False)
 

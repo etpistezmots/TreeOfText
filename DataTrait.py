@@ -1,31 +1,5 @@
+# -*- coding: utf-8 -*-
 import pandas as pd
-
-
-class DataOri:
-    '''
-    Pour traiter les données d'origine
-    Document-Term Matrix au format csv dans ce cas
-    '''
-
-    def __init__(self,path):
-
-        self.MET = pd.read_csv(path, sep=";", index_col=[0])
-
-
-    def PretraitFormatDefault(self):
-        """
-        Prétraitement du au formatage de mes données par défault
-        Doit être adapté suivant vos données !
-        les méthodes utilisées sont à aller chercher dans la libraire panda
-        """
-
-        # redonne un nom adapté à l'index
-        self.MET = self.MET.rename_axis('terme')
-        # simplifie le nom des colonne
-        # enlève les 7 premiers caractères
-        self.MET.rename(columns=lambda x: x[7:], inplace=True)
-
-        return self.MET
 
 
 class MatriceCarre :
